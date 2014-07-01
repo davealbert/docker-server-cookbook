@@ -1,0 +1,3 @@
+{
+    "run_list": [ "recipe[op::default]", "recipe[snort]", "recipe[fail2ban]" ]
+}
