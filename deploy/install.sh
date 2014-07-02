@@ -2,7 +2,7 @@
 
 # This runs as root on the server
 
-chef_binary=/opt/vagrant_ruby/bin/chef-solo
+chef_binary=$(which chef-solo)
 
 # Are we on a vanilla system?
 if ! test -f "$chef_binary"; then
