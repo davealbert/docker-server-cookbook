@@ -19,7 +19,6 @@ fi &&
 
 "$chef_binary" -c solo.rb -j solo.json
 
-mkdir ~/.ssh
 cp local/id_rsa ~/.ssh/
 
 curl --digest --user $username:$password https://bitbucket.org/davealbert/moodocityweb/get/v1.0.0.tar.bz2 -O
