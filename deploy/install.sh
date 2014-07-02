@@ -18,3 +18,12 @@ if ! test -f "$chef_binary"; then
 fi &&
 
 "$chef_binary" -c solo.rb -j solo.json
+
+mkdir ~/.ssh
+cp local/id_rsa ~/.ssh/
+
+curl --digest --user $username:$password https://bitbucket.org/davealbert/moodocityweb/get/v1.0.0.tar.bz2 -O
+bunzip2 v1.0.0.tar.bz2
+rm -rf web
+mkdir web && tar xf v1.0.0.tar -C web --strip-components 1
+
