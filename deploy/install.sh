@@ -28,4 +28,6 @@ curl --digest --user $username:$password https://bitbucket.org/davealbert/moodoc
 bunzip2 v1.0.0.tar.bz2
 rm -rf web
 mkdir web && tar xf v1.0.0.tar -C web --strip-components 1
+mkdir -p /var/www
+ln -s /home/vagrant/chef/web/ /var/www/nginx-default
 
