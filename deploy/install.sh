@@ -1,5 +1,8 @@
 #!/bin/bash
 
+username="$1"
+password="$2"
+
 # This runs as root on the server
 
 chef_binary=$(which chef-solo)
